@@ -45,6 +45,7 @@ class MainActivity : AppCompatActivity() {
             countView.setText(Integer.toString(countValue))
         }
         countView.setText("0")
+
     }
 
 
