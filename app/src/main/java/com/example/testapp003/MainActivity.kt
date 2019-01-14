@@ -19,9 +19,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val myView = MyView(this)
-        setContentView(myView)
-
         val countView: TextView = findViewById(R.id.text)
         val addButton: Button = findViewById(R.id.add)
         val pullButton: Button = findViewById(R.id.pull)
@@ -51,20 +48,4 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    class MyView(context: Context):View(context){
-        private var paint = Paint()
-        init{
-
-        }
-        override fun onDraw(canvas:Canvas){
-            // 色決め
-            paint.color = Color.argb(255,255,0,255)
-
-            // Styleのストローク設定
-            paint.style = Paint.Style.STROKE
-
-            canvas.drawRect(300f,300f,600f,600f,paint)
-
-        }
-    }
 }
